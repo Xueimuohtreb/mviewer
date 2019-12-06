@@ -1843,14 +1843,14 @@ mviewer = (function () {
                 _sourceOverlay.clear();
             }
             var ptResult = ol.proj.transform([x, y], 'EPSG:4326', _projection.getCode());
-			duration=parseInt(configuration.getConfiguration().searchparameters.duration)
-			if (! duration ){ duration = 1000 }
-			if (configuration.getConfiguration().searchparameters.animate==="true"){
-				_map.getView().animate({center:ptResult,zoom:zoom,duration:duration})
-			} else {
-				_map.getView().setCenter(ptResult);
-				_map.getView().setZoom(zoom);
-			}
+            duration=parseInt(configuration.getConfiguration().searchparameters.duration)
+            if (! duration ){ duration = 1000 }
+            if (configuration.getConfiguration().searchparameters.animate==="true"){
+                _map.getView().animate({center:ptResult,zoom:zoom,duration:duration})
+            } else {
+                _map.getView().setCenter(ptResult);
+                _map.getView().setZoom(zoom);
+            }
 
             if (querymap) {
                 var i = function () {
